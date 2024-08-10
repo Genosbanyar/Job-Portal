@@ -1,0 +1,1 @@
+<?php require "admins/categories.view.php"?>

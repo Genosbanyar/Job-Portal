@@ -1,0 +1,1 @@
+<?php require "view/job_applicant.view.php";?>

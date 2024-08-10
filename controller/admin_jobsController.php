@@ -1,0 +1,1 @@
+<?php require "admins/jobs.view.php"?>

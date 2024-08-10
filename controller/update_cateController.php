@@ -1,0 +1,1 @@
+<?php require "admins/update_cate.view.php";?>

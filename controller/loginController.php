@@ -1,0 +1,1 @@
+<?php require "auth/login.view.php";

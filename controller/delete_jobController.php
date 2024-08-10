@@ -1,0 +1,1 @@
+<?php require "admins/delete_job.view.php";

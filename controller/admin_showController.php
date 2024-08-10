@@ -1,0 +1,1 @@
+<?php require "admins/admin.view.php";?>
