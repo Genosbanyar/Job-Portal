@@ -5,6 +5,7 @@ require "view/partials/header.php";
 <?php 
 require "view/components/nav.php";
 require "config/QueryBuilder.php";
+$trendingKeys = $db->select("SELECT COUNT(keyword) AS count, keyword FROM keyword GROUP BY keyword ORDER BY count DESC LIMIT 4");
 
 //search job
 $status=false;

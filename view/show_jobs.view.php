@@ -5,6 +5,8 @@ require "view/partials/header.php";
 <?php 
 require "view/components/nav.php";
 require "config/QueryBuilder.php";
+$trendingKeys = $db->select("SELECT COUNT(keyword) AS count, keyword FROM keyword GROUP BY keyword ORDER BY count DESC LIMIT 4");
+
 //show categories
 if(isset($_GET['name'])){
     $category_name = $_GET['name'];

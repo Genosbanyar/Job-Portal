@@ -605,6 +605,12 @@ h4 {
   color: #000;
 }
 
+.site-section-profile {
+  padding-top: 7rem;
+  position: relative;
+  z-index: 2;
+}
+
 .site-section {
   padding-top: 7rem;
   padding-bottom: 7rem;

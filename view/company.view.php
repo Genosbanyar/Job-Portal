@@ -7,6 +7,8 @@ require "view/components/nav.php";
 require "config/QueryBuilder.php";
 //showing companies
   $companies = $db->select("SELECT * FROM users WHERE type='Company'");
+  $trendingKeys = $db->select("SELECT COUNT(keyword) AS count, keyword FROM keyword GROUP BY keyword ORDER BY count DESC LIMIT 4");
+
 ?>
 
 <!-- HOME -->

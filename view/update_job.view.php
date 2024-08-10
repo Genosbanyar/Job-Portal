@@ -4,6 +4,8 @@ require "view/partials/header.php";
 <!-- NAVBAR -->
 <?php 
 require "view/components/nav.php";
+$trendingKeys = $db->select("SELECT COUNT(keyword) AS count, keyword FROM keyword GROUP BY keyword ORDER BY count DESC LIMIT 4");
+
 if(!isset($_SESSION['name'])){
   header("Location: /");
 }

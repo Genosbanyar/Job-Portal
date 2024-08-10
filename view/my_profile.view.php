@@ -5,6 +5,8 @@ require "view/partials/header.php";
 <?php 
 require "view/components/nav.php";
 require "config/QueryBuilder.php";
+$trendingKeys = $db->select("SELECT COUNT(keyword) AS count, keyword FROM keyword GROUP BY keyword ORDER BY count DESC LIMIT 4");
+
 // if(!isset($_SESSION['name'])){
 //   header("Location: /");
 // }
@@ -100,7 +102,7 @@ if(isset($_GET['id'])){
       </div>
     </section>
           </div>
-          <section class="site-section">
+          <section class="site-section-profile">
       <div class="container">
       <?php if(isset($_SESSION['type']) && $_SESSION['type'] == 'Company'):?>
         <div class="row mb-5 justify-content-center">

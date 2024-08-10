@@ -5,6 +5,8 @@
 <?php 
 require "view/components/nav.php";
 require "config/QueryBuilder.php";
+$trendingKeys = $db->select("SELECT COUNT(keyword) AS count, keyword FROM keyword GROUP BY keyword ORDER BY count DESC LIMIT 4");
+
 if(!isset($_SESSION['name'])){
   header("Location: /");
 }
@@ -195,19 +197,7 @@ if(!isset($_SESSION['name'])){
   
             </form>
           </div>
-          <div class="col-lg-5 ml-auto">
-            <div class="p-4 mb-3 bg-white">
-              <p class="mb-0 font-weight-bold">Address</p>
-              <p class="mb-4">203 Fake St. Mountain View, San Francisco, California, USA</p>
-
-              <p class="mb-0 font-weight-bold">Phone</p>
-              <p class="mb-4"><a href="#">+1 232 3235 324</a></p>
-
-              <p class="mb-0 font-weight-bold">Email Address</p>
-              <p class="mb-0"><a href="#">youremail@domain.com</a></p>
-
-            </div>
-          </div>
+          
         </div>
       </div>
     </section>

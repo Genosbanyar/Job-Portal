@@ -2,7 +2,14 @@
 require "view/partials/header.php";
 ?>  
     <!-- NAVBAR -->
-   <?php require "view/components/nav.php";?>
+   <?php require "view/components/nav.php";
+   require "config/QueryBuilder.php"; 
+   $jobsCount = $db->count("SELECT * FROM jobs");
+  $companysCount = $db->count("SELECT * FROM users WHERE type='Company'");
+  $employeesCount = $db->count("SELECT * FROM users WHERE type='Employee'");
+  $trendingKeys = $db->select("SELECT COUNT(keyword) AS count, keyword FROM keyword GROUP BY keyword ORDER BY count DESC LIMIT 4");
+
+   ?>
 
     <!-- HOME -->
     <section class="section-hero overlay inner-page bg-image" style="background-image: url('images/hero_1.jpg');" id="home-section">
@@ -31,14 +38,14 @@ require "view/partials/header.php";
 
           <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
             <div class="d-flex align-items-center justify-content-center mb-2">
-              <strong class="number" data-number="1930">0</strong>
+              <strong class="number" data-number="<?= $employeesCount?>">0</strong>
             </div>
             <span class="caption">Candidates</span>
           </div>
 
           <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
             <div class="d-flex align-items-center justify-content-center mb-2">
-              <strong class="number" data-number="54">0</strong>
+              <strong class="number" data-number="<?= $jobsCount?>">0</strong>
             </div>
             <span class="caption">Jobs Posted</span>
           </div>
@@ -52,7 +59,7 @@ require "view/partials/header.php";
 
           <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
             <div class="d-flex align-items-center justify-content-center mb-2">
-              <strong class="number" data-number="550">0</strong>
+              <strong class="number" data-number="<?= $companysCount?>">0</strong>
             </div>
             <span class="caption">Companies</span>
           </div>
