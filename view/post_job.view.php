@@ -3,6 +3,7 @@ require "view/partials/header.php";
 ?>  
 <!-- NAVBAR -->
 <?php 
+require "config/QueryBuilder.php";
 require "view/components/nav.php";
 $trendingKeys = $db->select("SELECT COUNT(keyword) AS count, keyword FROM keyword GROUP BY keyword ORDER BY count DESC LIMIT 4");
 
@@ -30,7 +31,7 @@ $c_name="";
 $c_id="";
 $c_image="";
 $job_category = "";
-require "config/QueryBuilder.php";
+
 $categories = $db->select("SELECT * FROM categories");
 if(isset($_POST['click_post'])){
 

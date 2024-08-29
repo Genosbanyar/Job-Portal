@@ -122,7 +122,7 @@ if(isset($_GET['id'])){
             <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
               <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
                 <h2><?= $info['job_title'];?></h2>
-                <strong><?php if(isset($_SESSION['email'])){echo $_SESSION['email'];}else{echo $userEmail;}?></strong>
+                <strong><?= $userEmail;?></strong>
               </div>
               <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
                 <span class="icon-room"></span><?= $info['job_region'];?>

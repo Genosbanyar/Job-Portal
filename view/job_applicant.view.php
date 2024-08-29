@@ -57,9 +57,9 @@ if(isset($_GET['id'])){
           <?php foreach($jobs as $info): ?>
           <li class="mb-3 job-listing apply d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
             <div class="job-listing-logo">
-            <a style ="position: static;" target="_blank" href="job_single?job_id=<?= $info['job_id']?>">
+            
               <img class="job_profile" src="images/<?= $_SESSION['img_profile'];?>" alt="Free Website Template by Free-Template.co" class="img-fluid">
-              </a>
+              
             </div>
             <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
               <div class="job-listing-meta">

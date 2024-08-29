@@ -4,6 +4,7 @@ require "view/partials/header.php";
 <!-- NAVBAR -->
 <?php 
 require "view/components/nav.php";
+require "config/QueryBuilder.php";
 $trendingKeys = $db->select("SELECT COUNT(keyword) AS count, keyword FROM keyword GROUP BY keyword ORDER BY count DESC LIMIT 4");
 
 if(!isset($_SESSION['name'])){
@@ -30,7 +31,7 @@ $c_nameErr="";
 $c_idErr="";
 $c_imageErr="";
 $job_categoryErr = "";
-require "config/QueryBuilder.php";
+
 $categories = $db->select("SELECT * FROM categories");
 if(isset($_GET['id'])){
     $job_id = $_GET['id'];

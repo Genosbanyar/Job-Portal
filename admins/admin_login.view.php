@@ -75,6 +75,9 @@ session_start();
 </head>
 <body>
 <?php 
+if(isset($_SESSION['admin_name'])){
+  header("Location: home");
+}
 require "config/QueryBuilder.php";
 $status = false; 
 if(isset($_POST['btn_login'])){
