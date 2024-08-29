@@ -86,8 +86,7 @@ $categories = $db->select("SELECT * FROM categories");
             <h1 class="text-white font-weight-bold"><?= $job_name?></h1>
             <div class="custom-breadcrumbs">
               <a href="/">Home</a> <span class="mx-2 slash">/</span>
-              <a href="#">Job</a> <span class="mx-2 slash">/</span>
-              <span class="text-white"><strong><?= $job_name?></strong></span>
+              <a href="#">Job</a> <span class="mx-2 slash"></span> 
             </div>
           </div>
         </div>
@@ -101,7 +100,7 @@ $categories = $db->select("SELECT * FROM categories");
           <div class="col-lg-8 mb-4 mb-lg-0">
             <div class="d-flex align-items-center">
               <div class="border p-2 d-inline-block mr-3 rounded">
-                <img style="width: 80px" src="images/<?php if(isset($_SESSION['img_profile'])){echo $_SESSION['img_profile'];}else{echo $c_image;}?>" alt="Image">
+                <img style="width: 80px" src="images/<?= $c_image;?>" alt="Image">
               </div>
               <div>
                 <h2><?= $job_name?></h2>
@@ -284,7 +283,8 @@ $categories = $db->select("SELECT * FROM categories");
           <li class="apply job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
             <a href="job_single?job_id=<?= $related_job['id']?>"></a>
             <div class="job-listing-logo">
-              <img src="images/<?= $related_job['c_image']?>" alt="Image" class="img-fluid">
+              <img style="background-position: center;
+  background-size: cover;width: 100%;object-fit: cover;" src="images/<?= $related_job['c_image']?>" alt="Image" class="img-fluid">
             </div>
 
             <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">

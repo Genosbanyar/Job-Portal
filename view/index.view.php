@@ -34,15 +34,15 @@
                 </div>
                 <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
                   <select name="job_region" class="selectpicker" data-style="btn-white btn-lg" data-width="100%" data-live-search="true" title="Select Region">
-                    <option>Anywhere</option>
-                    <option>San Francisco</option>
-                    <option>Palo Alto</option>
-                    <option>New York</option>
-                    <option>Manhattan</option>
-                    <option>Ontario</option>
-                    <option>Toronto</option>
-                    <option>Kansas</option>
-                    <option>Mountain View</option>
+                  <option>Anywhere</option>
+                      <option>Yangon, Myanmar</option>
+                      <option>Mandalay, Myanmar</option>
+                      <option>Taunggyi, Shan State, Myanmar</option>
+                      <option>Naypyidaw, Myanmar</option>
+                      <option>Monywa, Myanmar</option>
+                      <option>Mawlamyine, Myanmar</option>
+                      <option>Magway, Myanmar</option>
+                      <option>Pyin Oo Lwin, Myanmar</option>
                   </select>
                 </div>
                 <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">

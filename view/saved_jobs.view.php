@@ -54,7 +54,8 @@ if(isset($_GET['id'])){
           <li class="job-listing apply d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
             <a href="job_single?job_id=<?= $info['id']?>"></a>
             <div class="job-listing-logo">
-              <img src="images/<?= $info['company_image'];?>" alt="Free Website Template by Free-Template.co" class="img-fluid">
+              <img style="background-position: center;
+  background-size: cover;width: 100%;object-fit: cover;" src="images/<?= $info['company_image'];?>" alt="Free Website Template by Free-Template.co" class="img-fluid">
             </div>
 
             <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">

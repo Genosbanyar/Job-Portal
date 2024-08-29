@@ -179,14 +179,14 @@ if(isset($_POST['click_post'])){
                 <label for="job-region">Job Region</label>
                 <select name="job_region" value="<?= $region;?>" class="selectpicker border rounded" id="job-region" data-style="btn-black" data-width="100%" data-live-search="true" title="Select Region">
                       <option>Anywhere</option>
-                      <option>San Francisco</option>
-                      <option>Palo Alto</option>
-                      <option>New York</option>
-                      <option>Manhattan</option>
-                      <option>Ontario</option>
-                      <option>Toronto</option>
-                      <option>Kansas</option>
-                      <option>Mountain View</option>
+                      <option>Yangon, Myanmar</option>
+                      <option>Mandalay, Myanmar</option>
+                      <option>Taunggyi, Shan State, Myanmar</option>
+                      <option>Naypyidaw, Myanmar</option>
+                      <option>Monywa, Myanmar</option>
+                      <option>Mawlamyine, Myanmar</option>
+                      <option>Magway, Myanmar</option>
+                      <option>Pyin Oo Lwin, Myanmar</option>
                     </select>
                     <span class="text-danger"><?= $job_regionErr;?></span>
               </div>
