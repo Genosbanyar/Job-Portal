@@ -131,6 +131,7 @@ if(!isset($_SESSION['admin_name'])){
     $nameErr = "";
     $emailErr = "";
     $passErr = "";
+    $pattern = '/^[a-zA-Z0-9._%+-]+@gmail+\.com$/';
     if(isset($_POST['btn_login'])){
      if(empty($_POST['admin_name'])){
         $nameErr = "Name field require!";
@@ -145,7 +146,10 @@ if(!isset($_SESSION['admin_name'])){
       $emailCount = $db->count("SELECT * FROM admins WHERE email='$_POST[admin_email]'");
     if($emailCount > 0){
       $emailErr = "Email is already taken!";
-    }else{
+    }else if(preg_match($pattern,$_POST['admin_email']) == 0){
+      $emailErr = "Please text the corret email!";
+    }
+    else{
       $db->insertAdmins([
       'name' => $_POST['admin_name'],
       'email' => $_POST['admin_email'],
